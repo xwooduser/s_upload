@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="uploadForm" type="s_u.form.UploadForm" />
+    <form-bean name="upload1Form" type="s_u.form.Upload1Form" />
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      attribute="uploadForm"
+      input="/upload.jsp"
+      name="uploadForm"
+      path="/upload"
+      scope="request"
+      type="s_u.action.UploadAction" />
+    <action
+      attribute="upload1Form"
+      input="/upload1.jsp"
+      name="upload1Form"
+      path="/upload1"
+      scope="request"
+      type="s_u.action.Upload1Action" />
+
+  </action-mappings>
+
+  <message-resources parameter="s_u.ApplicationResources" />
+</struts-config>
+
